@@ -1,0 +1,155 @@
+The rules outlined below are extracted from Dr. Harald Krebs' 2-voice
+counterpoint rules at:
+http://finearts.uvic.ca/music/programs_undergrad/theory/Counterpoint%20online.pdf
+
+Rules with a - in front of them have not been implemented yet.
+Fourth Species has not been implemented yet.
+
+First Species:
+	1 voice counterpoint
+
+	Necessary:
+		Counterpoint moves with same rhythm as cantus-firmus (note for note)
+
+		parallel motion verboten:
+			unless interval is (3rd or 6th or 10th)
+			AND there are no more than 3 consecutive statements of one interval
+
+		parallel perfect intervals (1, 5, 8, 12) are always verboten
+			(subset of previous rule, but we usually call it something else)
+
+		high point of melodic curve should not coincide.
+
+		no voice crossing wrt current note (voice crossing)
+		no voice crossing wrt previous note (overlapping)
+
+		only permissable horizontal motions:
+			m2, M2, m3, M3, P4, P5, m6, M6, P8
+
+		only permissable vertical intervals:
+			m3, M3, P4, P5, m6, M6, P8, m10, M10, P11, P12
+			EXCEPT: P1 is permissable on first and last notes.
+
+		pairs of (local min, local max) and (local max, local min) must have
+			intervallic relationship that fits in permissible vertical intervals
+			'indirect horizontal dissonance'
+
+- 		don't immediately repeat a note
+- 			EXCEPT: you can actually do this once. it's supposed to be tied.
+
+- 		don't immediately repeat a melodic segment (or a transposition thereof)
+
+		immediately after a leap of (P5, m6, M6, P8), must move by step (m2, M2)
+			in opposite direction
+
+		do not leave vocal range.
+
+		direct motion - do not move to P5 or P8 with similar motion
+			ie with both voices moving down, or both voices moving up
+
+		lower voice must start with tonic
+
+		upper voice must start with tonic or 5th
+
+		upper voice must end with the "degree 7, degree 8" pattern.
+
+-		if in a minor key, upper voice must end with "#7, 8"
+
+		may not use notes that are outside of the key
+-			EXCEPT: degree 7 at end of upper voice in minor key
+-			        degree 6 in minor key if not doing so would result in horizontal interval of aug2
+
+-		may not play #6 along side natural 6 or #7 against natural 7
+
+		
+
+	Desirable:
+		contrary motion
+		step when cantus firmus leaps
+		leap when cantus firmus steps
+		don't often exceed interval of a 10th
+		use more steps (m2, M2) than leaps
+		change direction frequently
+		build up to a high point, then come back down
+		avoid hovering within a small span (like a 3rd or 4th)
+		use more (m3, M3, m6, M6) than (P5, P8)
+
+
+test cases:
+	melody that with directions
+		-1 0 0 -1 and
+		 1 0 0  1
+	make sure that plateaus don't confuse the maxima / minima functions
+
+problems encountered:
+	representing multiple hierarchies with same objects without destroying mingus framework
+	representing minor keys within the mingus framework
+
+
+
+
+
+
+Second Species:
+	one voice must be whole notes (this is the cantus firmus)
+
+	other voices should be all half-notes:
+		except last note (must be whole note)
+		second last note (may be a whole note)
+		except first note (may be a half-rest)
+
+	no repeated notes allowed.
+
+	parallel 5ths/8ves on adjacent down beats are also not allowed
+
+	leaps greater than a 5th may only go from strong-to-weak beats.
+		(ie, must be within the same bar)
+
+	unison on weak beat is okay
+
+	dissonant intervals may now occur
+		only on weak beat
+		only approached by step
+		only left by step
+
+	indirect horizontal dissonance now not a problem between maxima and minima
+
+	indirect horizontal dissonance now a problem between adjacent downbeats
+
+
+
+Fourth Species:
+	one voice must be whole notes (this is the cantus firmus)
+
+	other voices should be all half-notes:
+		except the last note (must be a whole note)
+		except the first note (must be half-note rest)
+
+	all half-notes starting on strong beats must be ties (repetitions)
+		of the previous note
+		(except twice. you can un-tie two strong-beat half notes... just not directly after eachother)
+
+	dissonances are okay on downbeats
+		if the downbeat is tied from a consonant interval before it
+		and the dissonance is resolved downward by step on the next note
+		and the next interval is consonant
+			(ie. can't have two dissonances in a row)
+
+	4th-5th suspensions and 7th-8ve suspensions are not kosher in lower voice.
+
+	we now look at repeated suspensions as well as just repeated intervals
+		(strong, weak) pairs of (7, 6) (4, 3) and (2, 3) can be used in a consecutively
+			just not more than 3 of one type in a row!
+		(strong, weak) pairs of (2-1) suspensions can't be used consecutively
+			they sound like parallel octaves/unisons
+
+	parallel octaves on consecutive strong-beats are not okay
+		unless the interval between them is consonant
+
+	parallel octaves on consecutive weak-beats are not okay
+		unless the interval between them is consonant
+
+	high voice (if not cantus firmus) must end with intervals (7, 6, 1)
+	low voice (if not cantus firmus) must end with intervals (2, 3, 1)
+	cantus firmus must end with scale degrees (2, 1) ?
+
