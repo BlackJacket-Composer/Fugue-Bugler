@@ -32,13 +32,13 @@ To run:
     Usage: counterpoint.py [options]
     
     Options:
-      -h, --help            show this help message and exit
+       -h, --help           Show this help message and exit
      
-       -t                    Read tracks from tracks.py and perform sparse-
+       -t                   Read tracks from tracks.py and perform sparse-
      						sample belief prop on missing notes. If encountered,
      						will ignore instructions to read from MIDI file.
      
-       -f, --fill-in			Given a full length, single-voice piece generate an
+       -f, --fill-in		Given a full length, single-voice piece generate an
      						original counterpoint
      
        -g, --guess			Fill in missing notes from the MIDI file. Used in
